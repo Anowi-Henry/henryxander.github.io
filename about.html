@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h2{
+        font-size: 1.6em;
+    }
+    p{
+        font-size: 1em;
+    }
+    menu li:nth-of-type(2) {
+        border-bottom: 3px solid;
+    }
+    menu li:nth-of-type(2) a{
+        font-size: 1.5em;
+        font-weight: bold;
+
+    }
+   .skills{
+        margin: 3.5em 0;
+        padding: 0 2em;
+        
+    }
+    .skills h1{
+        text-align: center;
+        margin-bottom: 0.7em;
+    }
+    .skills ul{
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 2em;
+    }
+    .skills ul li{
+        flex: 1 1 300px;
+        background-color: #262626;
+        border-radius: 5em 0 5em 0px;
+        padding: 2em;
+        transition: .5s;
+    }
+    .skills li:hover{
+        background-color: var(--COLOR);
+        transform: translateY(-8px);
+    }
+    .skills li div{
+        font-size: 2em;
+        margin-bottom: 0.3em;
+    }
+    .skills li:nth-child(2) div{
+        color: rgb(74, 125, 146);
+        font-weight: bold;
+    }
+    .skills li:nth-child(3) div{
+       color: yellow;
+       font-weight: bold;
+    }
+    .skills li h2{
+        margin-bottom: 0.4em;
+    }
+    .skills li p{
+        text-transform: none;
+    }
+    .education{
+        margin: 3.5em 0;
+        padding: 0 2em;
+    }
+    .education h1{
+        text-align: center;
+        margin-bottom: 0.7em;
+    }
+    .education ul{
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 2em;
+        margin-bottom: 2em;
+    }
+    .education ul li{
+        flex: 1 1 300px;
+        background-color: #262626;
+        border-radius: 0 10px;
+        padding: 2em;
+        transition: .5s;
+        text-align: center;
+    }
+    .education li:hover{
+        background-color: var(--COLOR);
+        transform: translateY(-8px);
+    }
+    .education li div{
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        color: rgb(192, 2, 2);
+    }
+    .education li:first-child div{
+        color: black;
+    }
+    .education li:nth-child(2) div{
+        color: rgb(96, 1, 96);
+    }
+    .education li h2{
+        margin-bottom: 0.4em;
+    }
+    .education li p{
+        font-style: italic;
+        text-transform: none;
+    }
+    .cv{
+        margin: 3.5em 0;
+    }
+    .button{
+       color: white;
+       border: solid 1px var(--COLOR);
+       padding: 0.8em 3em;
+       border-radius: 0.5em;
+       font-size: 1em;
+       text-decoration: none;
+       cursor: pointer;
+       text-align: center;
+       transition: .3s;
+    }
+    .button:hover{
+        background-color: var(--COLOR);
+    }
+
+
+
+    @media screen and (min-width: 600px) {
+        menu li:nth-of-type(2){
+           border-bottom: none;
+        }
+        menu li:nth-of-type(2) a{
+           color: #ff004f;
+           font-weight: normal;
+           font-size: inherit;
+        }
+    }
+   
+
+
+    @media screen and (min-width: 678px) {
+        h2{
+            font-size: 2em;
+        }
+        p{
+            font-size: 1.2em;
+        }
+    }
+</style>
+<link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xander</title>
+</head>
+<body>
+    <header>
+        <h1 id="logo">xander.</h1>
+        <div id="bars" class="fas fa-bars"></div>
+        <menu>
+            <div id="times" class="fas fa-times"></div>
+            <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>   
+            </ul>
+        </menu>
+    </header> 
+
+    <section class="about">
+        <img src="images/about-image.png"  alt="">
+        <div class="content">
+            <h1>About Me</h1>
+            <p>I am a frontend developer based in Awka, Anambra state. I am skilled in the frontend programming languages, HTML, CSS, JS and their various frameworks. I am also a master designer who creates high quality and pro user interface designs.  <br><br>Since the beginning of my programming journey, I've done amazing works  for entepreneurs and budding businesses making them shine brightly in the digital realm with my clean design patterns, simple content structures and thoughtful user friendly interactions. <br>Making websites is my hobby, I love bringing cool ideas to life on a browser.</p>
+        </div>
+    </section>
+
+   <section class="skills">
+      <h1>skills</h1>
+     <ul>
+         <li>
+            <div class="fas fa-code"></div>
+            <h2>HTML</h2>
+            <p>I speak HTML fluently knowing all the basics and advanced levels of HTML ranging from elements, tags, layouts, semantics etc to forms, attributes, graphics, and media. <br>With my knowledge, I deliver the basic structures of a site which is further enhanced by CSS, JavaScript and their various frameworks.</p>
+         </li>
+         <li>
+             <div>#</div>
+             <h2>CSS</h2>
+             <p>I'm skilled in CSS from the basics- box-model, units, layouts, grids, pseudo-class, pseudo-element, position e.t.c to its advanced levels- effects, transformations, transitions, animations and responsive web designs. I'm also skilled in two of its famous frameworks, Bootstrap and Tailwind.
+             <br>Knowing all these, I define the styling and layout of webpages making them  visually appealing, user-friendly and accessible.   
+             </p>
+         </li>
+         <li>
+           <div>JS</div>
+           <h2>JavaScript</h2>
+           <p>I speak JavaScript less fluently, knowing just enough for frontend development. I'm skilled in the basics- data types,loops, conditions, objects, classes, fuctions, methods and properties,  etc and also skilled in some of its advanced levels- events, Async, Document Object Model (DOM) and Browser Object Model (BOM). <br>With all these I create interactive and dynamic webpages.   
+           </p>
+         </li>
+      </ul>
+   </section>
+
+   <section class="education">
+    <h1>education</h1>
+    <ul>
+        <li>
+            <div class="fas fa-graduation-cap"></div>
+            <h2>2022-current</h2>
+            <p>B.Eng. Bachelor's degree in Electronics and Computer Engineering E.C.E in view from Nnamdi Azikiwe Unversity Awka</p>
+        </li>
+        <li>
+            <div class="fas fa-graduation-cap"></div>
+            <h2>2021</h2>
+            <p> W.A.S.S.C.E. (West African Senior School Certificate Examination) <br> from Federal Government
+            College Enugu</p>
+        </li>
+        <li>
+            <div class="fas fa-graduation-cap"></div>
+            <h2>2015</h2>
+            <p>F.S.L.C. (First School leaving Certificate) <br>from Godfrey Okoye University Primary School Enugu</p>
+        </li>
+    </ul>
+    <div class="cv"><a href="images/Curriculum Vitae.docx" download class="button">download CV</a></div> 
+   </section>   
+   
+   <footer>
+    <div>
+      <a href="https://wa.link/uas7jo"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+2348168549881"><i class="fas fa-phone"></i></a>
+      <a href="https://www.linkedin.com/in/henry-anowi-6a6a97288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:anowihenry@gmail.com?subject=Hello Xander, i'm contacting you through your website"><i class="fab fa-telegram-plane"></i></a>
+  </div>
+  <h5>© copyright 2024 Henry Xander  · All Rights Reserved ·<br> site by Henry Xander</h5>
+ </footer>
+    <script src="script.js"></script>
+</body>
+</html>

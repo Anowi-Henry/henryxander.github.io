@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        :root{
+           --COLOR: #ff004f;
+           --PRIMARY_COLOR: #fffff0;
+           --BACKGROUND-COLOR: black;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        span{
+            color: var(--COLOR);
+            text-transform: capitalize;
+        }
+        h1{
+            text-align: center;
+        }
+        menu li:nth-of-type(4) {
+            border-bottom: 3px solid;
+        }
+        menu li:nth-of-type(4) a{
+           font-size: 1.5em;
+           font-weight: bold;
+        }
+        .work{
+            margin: 3em 0;
+            padding: 0 2em;
+        }
+        .work ul{
+            display: grid;
+            grid-template: repeat(1, 1fr)/repeat(1, 1fr);
+            gap: 20px 30px;
+            padding: 20px 5px;
+            margin: 2em 0;
+        }
+        .work li{
+            position: relative;
+            transition: .5s;
+        }
+        .work li div{
+            height: 0%;
+            background: linear-gradient(rgba(0, 0, 0, 0.511), #ff004f);
+            text-align: center;
+            padding: 0 2em;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            transition: .5s;
+            overflow: hidden;
+            color: white;
+        }
+        .work li:hover div{
+            height: 100%;
+        }
+        .work li:hover{
+            transform:  scale(1.05);
+        }
+        .work li h3{
+            margin-bottom: 0.4em;
+        }
+        .reviews{
+             padding: 2em;
+             background-image: url('images/Shape.png');
+             background-attachment: fixed;
+        }
+        .parent{
+             position: relative;
+        }
+        .buttons i{
+            position: absolute;
+            top: 35%;
+            cursor: pointer;
+            background-color: whitesmoke;
+            padding: 0.2em;
+            color: #ff004f;
+            border-radius: 50%;
+            border:  2px #ff004f solid;
+            font-size: 1em;
+            transition: .3s;
+        }
+        .buttons i:hover{
+            background-color: #ff004f;
+            color: whitesmoke;
+        }
+        #prev{
+            left: -1.5em;
+            
+        }
+        #next{
+            right: -1.5em;
+        }
+        .slider{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .reviews ul{
+            display: flex;
+            list-style-type: none;
+            gap: 6em;
+            margin: 2em;
+            margin-top: 6em;    
+        }
+        .reviews ul li{
+          margin: 0 2em;
+          display: none;
+          background: black; 
+          padding: 2em;
+        }
+        .reviews li.main{
+          display: initial;
+        }
+        .first-content{
+            margin-bottom: 2em;         
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+        .reviews li img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+       }
+       .reviews li p{
+         margin: 2em 0;
+         font-size: 0.93em;
+         padding: 0 1em;
+      }
+       .reviews h4{
+           margin-bottom: 1.5em;
+            text-transform: none;
+       }
+
+
+       @media screen and (min-width: 420px) {
+        .buttons i{
+            padding: 0.5em;
+            color: #ff004f;
+            border-radius: 50%;
+            border:  2px #ff004f solid;
+            font-size: 1.2em;
+            transition: .3s;
+        }
+        #prev{
+          left: -1em;
+        }
+        #next{
+          right: -1em;
+        }
+       }
+
+
+       @media screen and (min-width: 530px) {
+        .work ul{
+          padding: 20px 25px;
+        }
+       }
+
+
+       @media screen and (min-width: 600px) {
+        menu li:nth-of-type(4){
+           border-bottom: none;
+        }
+        menu li:nth-of-type(4) a{
+           color: #ff004f;
+           font-weight: normal;
+           font-size: inherit;
+        }
+        .work{
+            margin: 3em 0;
+            
+        }
+        
+        .slider li{
+          margin: auto 3em;
+        }
+        #prev{
+          left: -1em;
+        }
+        #next{
+          right: -1em;
+        }
+          
+       }
+
+
+       @media screen and  (min-width: 700px) {
+        .work{
+            padding: 0 2em;
+          }
+        .work ul{
+            grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+            padding: 20px 5px;
+          }
+          
+          
+       }
+
+       @media screen and (min-width: 900px) {
+          .work ul{
+            grid-template: repeat(3, 1fr)/repeat(8, 1fr);
+            padding: 20px 30px;
+          }
+          .work ul li{
+            grid-row: span 2;
+          }
+          .work ul li:first-of-type{
+            grid-area: 1/1/2/4;
+          }
+          .work ul li:nth-of-type(2){
+            grid-area: 1/4/2/6;
+          }
+          .work ul li:nth-of-type(3){
+            grid-area: 1/6/2/9;
+          }
+          .work ul li:nth-of-type(4){
+            grid-area: 2/1/3/3;
+          }
+          .work ul li:nth-of-type(5){
+             grid-column: 3/7;
+             grid-row: 2/3;
+          }
+          .work ul li:nth-of-type(6){
+            grid-column: 7/9;
+            grid-row: 2/3;
+          }
+          .work ul li:nth-of-type(7){
+            grid-column: 1/4;
+            grid-row: 3/4;
+          }
+          .work ul li:nth-of-type(8){
+            grid-area: 3/4/4/6;
+          }
+          .work ul li:nth-of-type(9){
+            grid-column: 6/9;
+            grid-row: 3/4;
+          }
+          .work ul li:nth-of-type(10){
+            grid-column: 1/3;
+            grid-row: 4/5;
+          }
+          .work ul li:nth-of-type(11){
+            grid-column: 3/7;
+            grid-row: 4/5;
+          }
+          .work ul li:nth-of-type(12){
+            grid-column: 7/9;
+            grid-row: 4/5;
+          }
+          #prev{
+          left: 0;
+        }
+        #next{
+          right: 0;
+        }
+          
+       }
+    </style>
+<link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xander</title>
+</head>
+<body>
+    <header>
+        <h1 id="logo">xander.</h1>
+        <div id="bars" class="fas fa-bars"></div>
+        <menu>
+            <div id="times" class="fas fa-times"></div>
+            <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>   
+            </ul>
+        </menu>
+    </header> 
+
+
+    <section class="work">
+        <h1>my work <span>samples</span></h1>
+        <ul>
+            <li>
+                <img src="images/Coffee shop site.png" alt="Coffee site">
+                <a href="images/Coffee shop site.png">
+                    <div>
+                    <h3>A coffee website built for a coffe making company</h3>
+                    <p>Built with HTML, CSS, Bootstrap and JavaScript. Finished the work on August 2022 </p>
+                </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Fashion website.png" alt="Fashion website">
+                <a href="images/Fashion website.png">
+                    <div>
+                       <h3>A Fashion design website built for a fashion designer</h3>
+                       <p>Built with HTML, CSS and JavaScript. <br> Finished on November 2022.</p>
+                   </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Health service website.png" alt="Health service">
+                <a href="images/Health service website.png">
+                    <div>
+                    <h3>Health service website built for a private clinic</h3>
+                    <p>Built with HTML, CSS, Bootstrap, JavaScript and Jquery.<br> Finsihed on October 2022.</p>
+                </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Graphic design website.png" alt="Graphic design website">
+                <a href="images/Graphic design website.png">
+                   <div>
+                    <h3>A graphic design portfolio website built for a graphic designer</h3>
+                    <p>Built with HTML, CSS and JavaScript.<br> Finished on October 2022.</p>
+                   </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Construction website 1.png" alt="Construction website 1">
+                <a href="images/Construction website 1.png">
+                  <div>
+                    <h3>A building construction blog website built for a civil engineer</h3>
+                    <p>Built with HTML, CSS, JavaScript and Jquery. <br>Finished on November 2022.</p>
+                  </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Resturant website.png" alt="Resturant website">
+                <a href="images/Resturant website.png">
+                  <div>
+                    <h3>A resturant blog website</h3>
+                    <p>Built with HTML, CSS and JavaScript. <br>Finished on June 2022.</p>
+                  </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Taxi website.png" alt="Taxi website">
+                <a href="images/Taxi website.png">
+                  <div>
+                    <h3>A taxi service website</h3>
+                    <p>Built with HTML, CSS, Tailwind and JavaScript. <br>Finsished on September 2022.</p>
+                  </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Education website.png" alt="Education website">
+                <a href="images/Education website.png">
+                  <div>
+                    <h3>A tutorial blog website</h3>
+                    <p>Built with HTML and CSS. <br>Finished on July 2022.</p>
+                  </div>
+                </a>
+            </li>
+            <li>
+                <img src="images/Fitness website.png" alt="Fitness website">
+                <a href="images/Fitness website.png">
+                  <div>
+                    <h3>A gym/fitness center website</h3>
+                    <p>Built with HTML, CSS, Bootstrap and JavaScript. <br> Finished on August 2022.</p>
+                  </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+    <section class="reviews">
+        <h1><span>customer</span> reviews</h1>
+        <div class="parent">
+            <div class="buttons">
+                <i id="prev" class="fas fa-arrow-left"></i>
+                <i id="next" class="fas fa-arrow-right"></i>
+            </div>
+            <ul class="slider">
+                <li class="main">
+                    
+                    <div class="first-content">
+                      <img src="images/Customer-1.jpg" alt="pic-1">
+                      <h4>Gift Adebisi<br>Graphic Designer</h4>
+                    </div>
+                    <p>Xander the programmer excels at turning your website dreams into reality, he proves to be innovative and works with ideas I have as well. 
+                    I'm pleased with the website he made for me, he listened to everything I wanted in a website, then delivered it. I'll never stop recommending him to people. </p>     
+                </li>
+                <li>
+                   
+                    <div class="first-content">
+                       <img src="images/Customer-2.jpg" alt="pic-2">
+                       <h4>Shekarau Usman <br>Teacher</h4>
+                    </div>
+                    <p>Xander provides high quality and high impact design work, his website is appealing, structured as well as effective and he also pays outstanding attention to details. I've already referred him to my friends and relations. </p>
+                       
+                </li>
+                <li>  
+                    <div class="first-content">
+                       <img src="images/Customer-3.jpg" alt="pic-3">
+                       <h4>Chimaobi Godswill<br>Entrepreneur </h4>
+                    </div>
+                    <p>Since having my website built, I've seen 75% increase in sales. Xander did a fantastic job in general for me, he provided a website that met all the standards I was looking for.</p>  
+                </li>
+                <li>  
+                  <div class="first-content">
+                     <img src="images/Customer-4.jpg" alt="pic-3">
+                     <h4>Emeka Ositadimma<br>Civil Engineer</h4>
+                  </div>
+                  <p>Xander took  the time to know my business before starting to build, he brought design ideas rather than needing me to bring it myself of which I'm no good at. Not only did the website exceed my expectations, it also provided excellent information for my clients and this increased customer growth.
+                  I'll highly recommend Xander to anyone in the market for a professional website.  
+                  </p>  
+              </li>
+              <li>  
+                <div class="first-content">
+                   <img src="images/Customer-5.jpg" alt="pic-3">
+                   <h4>Clifford Itoro-obong<br>Blogger </h4>
+                </div>
+                <p> Employing Xander's services  was probably one of the best decisions I've ever made. I've been receiving compliments on my website's attractive design and easy navigation, this led to a vast improvement to my web visits. This is certainly the most productive site, I have ever had designed for me. I will be pursuing future projects with him.</p>  
+            </li>
+            <li>  
+              <div class="first-content">
+                 <img src="images/Customer-7.jpg" alt="pic-3">
+                 <h4>Yewande Orisa<br>Freelancer </h4>
+              </div>
+              <p>I couldn't be more pleased with my new website, it's beautiful and easy to navigate. His pricing venture is unique and reasonable. I would recommend Xander to anyone looking for a website. </p>  
+          </li>
+          <li>  
+            <div class="first-content">
+               <img src="images/Customer-8.jpg" alt="pic-3">
+               <h4>Chidimma Amanda<br>Gym Instructor </h4>
+            </div>
+            <p>I'm impressed with Xander's professionalism, he handles things very efficiently. I'm so proud of the work he did for me and i won't be unwilling to work with him again.</p>  
+        </li>
+            </ul>
+        </div>
+    </section>
+
+
+    
+    <footer>
+      <div>
+        <a href="https://wa.link/uas7jo"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+2348168549881"><i class="fas fa-phone"></i></a>
+        <a href="https://www.linkedin.com/in/henry-anowi-6a6a97288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:anowihenry@gmail.com?subject=Hello Xander, i'm contacting you through your website"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+    <h5>© copyright 2024 Henry Xander  · All Rights Reserved ·<br> site by Henry Xander</h5>
+   </footer>
+    <script>
+
+const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        const review = document.querySelector('.slider').children;
+        const totalreview = review.length;
+        let currenIndex = 0;
+
+
+
+
+       next.addEventListener('click', () => {
+            nextReview()
+        })
+
+
+       
+
+        function nextReview() {
+            review[currenIndex].classList.remove('main');
+             if(currenIndex == totalreview - 1){
+                     currenIndex = 0;
+             } 
+             else{
+                currenIndex++;
+             }
+             review[currenIndex].classList.add('main')
+        }
+        prev.addEventListener('click', () => {
+            review[currenIndex].classList.remove('main');
+            if(currenIndex == 0){
+                currenIndex = totalreview - 1;
+            }
+            else{
+                currenIndex--;
+            }
+            review[currenIndex].classList.add('main');
+        })
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

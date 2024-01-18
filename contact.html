@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+ <style>
+    menu li:nth-of-type(5) {
+            border-bottom: 3px solid;
+    }
+    menu li:nth-of-type(5) a{
+           font-size: 1.5em;
+           font-weight: bold;
+    }
+    .contact{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1.5em;
+    margin: 4em 0;
+    gap: 3em;
+    }
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+}
+.container h1{
+    margin-bottom: 0.4em;
+}
+.container div{
+    margin: 0.7em 0;
+    display: flex;
+    gap: 1em;
+}
+.container div i{
+    color: var(--COLOR);
+    font-size: 1.2em;
+}
+.container div h5{
+    text-transform:  none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 0.9em;
+   
+}
+.container h5 a{
+    text-transform: none;
+    text-decoration: none;
+    font-weight: normal;
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+}
+.social-media div{
+    margin: 0;
+    gap: 1em;
+}
+.social-media div i{
+    color: white;
+    transition: .5s;
+}
+.social-media div i:hover{
+    color: #ff004f;
+}
+.button{
+    background-color: var(--COLOR);
+    color: white;
+    border: none;
+    padding: 0.8em 3em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.faqs{
+    flex: 1 1 300px;
+}
+.faqs h1{
+    margin-bottom: 0.6em;
+}
+.faqs ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.faqs li summary{
+    background-color: #262626;
+    padding: 1em;
+    cursor: pointer;
+    text-transform: none;
+}
+.faqs li p{
+    background-color: ivory;
+    color: #262626;
+    padding: 1em; 
+    font-size: 0.95em;
+}
+.faqs p::after{
+    content: '.';
+}
+ .faqs li p span{
+    color: grey;
+}
+
+@media screen and (min-width: 410px) {
+    .contact{
+        padding: 0 2.5em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+            menu li:nth-of-type(5){
+                border-bottom: none;
+            }
+            menu li:nth-of-type(5) a{
+                color: #ff004f;
+                font-weight: normal;
+                font-size: inherit;
+            }
+        }
+</style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <h1 id="logo">xander.</h1>
+        <div id="bars" class="fas fa-bars"></div>
+        <menu>
+            <div id="times" class="fas fa-times"></div>
+            <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>   
+            </ul>
+        </menu>
+    </header> 
+
+    <section class="contact">
+        <div class="container">
+           <h1>contact me</h1>
+           <div>
+              <i class="fab fa-telegram-plane" ></i>
+              <h5>email me <a href="mailto:anowihenry@gmail.com?subject=Hello Xander, i'm contacting you through your website">anowihenry@gmail.com</a></h5>
+           </div>
+           <div>
+              <i class="fas fa-phone-square-alt"></i>
+              <h5>call on phone <a href="tel:+2348168549881">08168549881</a></h5>
+           </div>
+           <div class="social-media">
+            <h5>
+               you can also Message on Social media 
+            </h5>
+              <div>
+                <a href="https://wa.link/uas7jo"><i class="fab fa-whatsapp" ></i></a>
+                <a href="https://www.linkedin.com/in/henry-anowi-6a6a97288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin" ></i></a>
+              </div>   
+           </div>
+        </div>
+        <div class="faqs">
+            <h1>FAQS</h1>
+        <ul>
+            <li>
+                <details>
+                    <summary><span>Q.</span>   What do you do?</summary>
+                    <p><span>A.</span>   I design and build front-end of websites. </p>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><span>Q.</span>   How much do you charge?</summary>
+                    <p><span>A.</span>   I charge between 100$ to 200$ depending on the complexity of the site</p>
+                </details>
+            </li>
+            <li>
+                  <details>
+                    <summary><span>Q.</span>   How long does it take you to finish a project?</summary>
+                    <p><span>A.</span>  It takes me within 8 days to 14 days to finish a project </p>
+                  </details>
+            </li>
+            <li>
+                  <details>
+                    <summary><span>Q.</span>Where can i reach you faster? </summary>
+                    <p><span>A.</span>Call on Phone if you want to get a faster response from me  </p>
+                  </details>
+            </li>
+        </ul>
+        </div>
+     </section>
+    
+     <footer>
+        <div>
+          <a href="https://wa.link/uas7jo"><i class="fab fa-whatsapp"></i></a>
+          <a href="tel:+2348168549881"><i class="fas fa-phone"></i></a>
+          <a href="https://www.linkedin.com/in/henry-anowi-6a6a97288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:anowihenry@gmail.com?subject=Hello Xander, i'm contacting you through your website"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+      <h5>© copyright 2024 Henry Xander  · All Rights Reserved ·<br> site by Henry Xander</h5>
+     </footer>
+     <script src="script.js"></script>
+</body>
+</html>

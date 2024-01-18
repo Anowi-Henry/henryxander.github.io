@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            background-image: url('images/background-image\ \(3\).jpg');
+        }
+        h2{
+            font-size: 1.7em;
+        }
+        p{
+            font-size: 1.2em;
+        }
+        menu li:nth-of-type(3) {
+            border-bottom: 3px solid;
+        }
+        menu li:nth-of-type(3) a{
+           font-size: 1.5em;
+           font-weight: bold;
+        }
+        .heading{
+            text-align: center;
+            margin: 2.5em 0;
+            background-color: #26262600;
+            display: block;
+        }
+        .heading:hover{
+            transform: none;
+        }
+        section{
+            margin: 2.5em 1.5em;
+            background-color: rgb(38, 38, 38);
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 50px 0;
+            transition: .3s;
+        }
+        section:hover{
+            transform: translateY(-0.9em);
+        }
+        .parent{
+            flex: 1 1 400px;
+            margin: 2.5em 0 0;
+            position: relative;
+        }
+        .arrow i{
+            position: absolute;
+            top: 35%;
+            cursor: pointer;
+            background-color: whitesmoke;
+            padding: 0.2em;
+            color: #ff004f;
+            border-radius: 50%;
+            border:  2px #ff004f solid;
+            font-size: 1em;
+            transition: .3s;
+        }
+        .arrow i:hover{
+            background-color: #ff004f;
+            color: whitesmoke;
+        }
+        .arrow i:first-child{
+            left: 1em;
+        }
+        .arrow i:last-child{
+            right: 1em;
+        }
+        figure{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10%;
+            display: none;
+            height: 280px;
+        }
+        .main{
+            display: flex;
+        }
+        .active{
+            display: flex;
+        }
+        .show{
+            display: flex;
+        }
+        video{
+            width: 80%;
+            height: 90%;   
+        }
+        figcaption{
+            margin-top: 1em;
+        }
+        .text{
+            flex: 1 1 400px;
+            padding: 2em;
+        }
+        .text h2{
+            text-align: center;   
+            margin-bottom: 0.5em;
+        }
+        .text span{
+           color: #ff004f; 
+        }
+        .text p{
+            text-transform: none;
+            text-align: center;
+            text-indent: 5px;
+        }
+        img{
+            width: 80%;
+            height: 90%;
+            box-shadow: rgb(12, 2, 2) 0px 0px 10px;
+        }
+
+
+        @media screen and (min-width: 420px) {
+         .arrow i{
+            padding: 0.5em;
+            color: #ff004f;
+            border-radius: 50%;
+            border:  2px #ff004f solid;
+            font-size: 1.2em;
+            transition: .3s;
+          }
+        }
+
+
+        @media screen and (min-width: 600px) {
+         menu li:nth-of-type(3){
+           border-bottom: none;
+        }
+        menu li:nth-of-type(3) a{
+           color: #ff004f;
+           font-weight: normal;
+           font-size: inherit;
+        }
+        }
+
+
+
+        @media screen and (min-width: 880px) {
+            h2{
+               font-size: 1.9em;
+            } 
+            section{
+                margin: 4em 2.5em;
+                border-radius: 0;
+            }
+            .parent{
+                width: 48%;
+                margin: 3em 0;
+            }
+            .text{
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .layouts{
+                flex-direction: row-reverse;
+            }
+            
+        }
+
+    </style>
+<link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xander</title>
+</head>
+<body>
+    <header>
+        <h1 id="logo">xander.</h1>
+        <div id="bars" class="fas fa-bars"></div>
+        <menu>
+            <div id="times" class="fas fa-times"></div>
+            <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>   
+            </ul>
+        </menu>
+    </header> 
+   <section class="heading">
+     <h1>My <span> Services</span></h1>
+   </section>
+
+
+    <section class="effects">
+        <div class="parent">
+            <div class="arrow">
+                <i class="fas fa-arrow-left" id="prev"></i>
+                <i class="fas fa-arrow-right" id="next"></i>
+            </div>
+            <div class="slider">
+                <figure class="main">
+                    <video src="images/Parralax Effect.mp4" muted="" controls loop="true"></video>
+                    <figcaption>Parralax Scrolling Effects</figcaption>
+                </figure>
+                <figure>
+                    <video src="images/Glowing text hover effect (2).mp4" muted="" controls loop="true"></video>
+                    <figcaption>Glowing Text Hover Effects </figcaption>
+                </figure>
+                <figure>
+                    <video src="images/Slider Effect.mp4" muted="" controls loop="true"></video>
+                    <figcaption>Slider Effects</figcaption>
+                </figure>
+                <figure>
+                    <video src="images/Text-transition effect.mp4" muted="" controls loop="true"></video>
+                    <figcaption>Text transition effects</figcaption>
+                </figure>
+                <figure>
+                    <video src="images/Border glowing effect.mp4" muted="" controls loop="true"></video>
+                    <figcaption>Border glowing effect</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="text">
+            <h2>Amazing web <span>Effects</span> </h2>
+            <p>Make your website aesthetically pleasing and eye catching to visitors with my numerous web effects that will interest and glue visitors to your site, giving them a cutting edge visual experience when they look through a page in your site thus keeping them engaged and reading till they turn from ordinary site visitors to clients.</p>
+        </div>
+    </section>
+
+
+    <section class="layouts">
+        <div class="parent">
+            <div class="arrow">
+                   <i class="fas fa-arrow-left" id="left"></i>
+                   <i class="fas fa-arrow-right" id="right"></i>
+            </div>
+            <div class="slider">
+                <figure class="active">
+                    <img src="images/asset07.png" alt="Assymetrical Layout">
+                    <figcaption>Assymetrical Layout</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Z-shaped-layout.png" alt="Z-shaped-layout">
+                    <figcaption>Z-shaped-layout</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Fshaped-layout.png" alt="Fshaped-layout">
+                    <figcaption>Fshaped-layout</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Split-screen-layout.png" alt="Split-screen-layout">
+                    <figcaption>Split-screen-layout</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Centered main content layout.png" alt="Centered main content layout">
+                    <figcaption>Centered main content layout</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Grid layouts.jpg" alt="Grid layouts">
+                    <figcaption>Grid layouts</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Blog post layout.jpeg" alt="Blog post layout">
+                    <figcaption>Blog post layout</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Two_column-layout.png" alt="Two_column-layout">
+                    <figcaption>Two column layout</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Fixed sidebar layout.png" alt="Fixed sidebar layout">
+                    <figcaption>Fixed sidebar layout</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="text">
+            <h2>unique/non-generic web <span>layouts</span></h2>
+            <p>Make your site very unique and outstanding with my various visually appealing non-generic web layouts sized and ordered in a good pattern which will help to enhance your website's message and stability thus making content easy to digest and increasing engagement to your site.</p>
+        </div>
+
+    </section>
+
+
+    <section class="user-interface">
+        <div class="parent">
+             <div class="arrow">
+                <i class="fas fa-arrow-left" id="back"></i>
+                <i class="fas fa-arrow-right" id="front"></i>
+             </div>
+             <div class="slider">
+                <figure class="show">
+                    <img src="images/Artificial-Intelligence-Remote-App-Interface-Design-0.jpg" alt="Artificial-Intelligence-Remote-App-Interface-Design">
+                    <figcaption>Artificial Intelligence Remote App Interface Design</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Social media app interface design.png" alt="">
+                    <figcaption>Social media app interface design</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/booking website design.jpg" alt="booking website design">
+                    <figcaption>booking website interface design</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Food blog site interface design.png" alt="Food blog site interface design">
+                    <figcaption>Food blog site interface design</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Shopping app interface design.png" alt="Shopping app interface design">
+                    <figcaption>Shopping app interface design</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Coffee app interface design.jpg" alt="Shopping app interface design">
+                    <figcaption>Coffee app interface design</figcaption>
+                </figure>
+             </div>
+        </div>
+        <div class="text">
+              <h2>UI/UX <span>designs</span></h2>
+              <p>Create a longlasting impression of your brand's professional image to your site visitors with my user friendly designs that creates meaningful experience and gives an overaching feel of products and components to your site visitors.<br>This positively impacts visitor's perception of your business and will increase the time spent on your website.</p>
+        </div>
+    </section>
+
+
+
+
+    
+    
+    <footer>
+          <div>
+            <a href="https://wa.link/uas7jo"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+2348168549881"><i class="fas fa-phone"></i></a>
+            <a href="https://www.linkedin.com/in/henry-anowi-6a6a97288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:anowihenry@gmail.com?subject=Hello Xander, i'm contacting you through your website"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+        <h5>© copyright 2024 Henry Xander  · All Rights Reserved ·<br> site by Henry Xander</h5>
+       </footer>
+
+    <script>
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        const videos = document.querySelector('.effects .slider').children;
+        const totalvideos = videos.length;
+        const front = document.getElementById('front');
+        const back = document.getElementById('back');
+        const pics = document.querySelector('.user-interface .slider').children;
+        const totalpics = pics.length;
+        const right = document.getElementById('right');
+        const left = document.getElementById('left');
+        const images = document.querySelector('.layouts .slider').children;
+        const totalimages = images.length;
+        let currenIndex = 0;
+        let currenPics = 0;
+        let currenImages = 0;
+
+
+       next.addEventListener('click', () => {
+           videos[currenIndex].classList.remove('main');
+             if(currenIndex == totalvideos - 1){
+                     currenIndex = 0;
+             } 
+             else{
+                currenIndex++;
+             }
+             videos[currenIndex].classList.add('main')
+        })
+
+        prev.addEventListener('click', () => {
+            videos[currenIndex].classList.remove('main');
+            if(currenIndex == 0){
+                currenIndex = totalvideos - 1;
+            }
+            else{
+                currenIndex--;
+            }
+            videos[currenIndex].classList.add('main');
+        })
+
+
+
+        right.addEventListener('click', () => {
+            images[currenPics].classList.remove('active');
+            if(currenPics == totalimages - 1){
+                   currenPics = 0;
+            }
+            else{
+                currenPics++;
+            }
+            images[currenPics].classList.add('active')
+        })
+
+        left.addEventListener('click', () => {
+            images[currenPics].classList.remove('active');
+            if(currenPics == 0){
+                currenPics = totalimages - 1;
+            }
+            else{
+                currenPics--;
+            }
+            images[currenPics].classList.add('active')
+        })
+
+
+
+        front.addEventListener('click', () => {
+            pics[currenImages].classList.remove('show');
+            if(currenImages == totalpics - 1){
+                currenImages = 0;
+            }
+            else{
+                currenImages++;
+            }
+            pics[currenImages].classList.add('show')
+        })
+
+        back.addEventListener('click', () => {
+            pics[currenImages].classList.remove('show');
+            if(currenImages == 0){
+                currenImages = totalpics - 1;
+            }
+            else{
+                currenImages--;
+            }
+            pics[currenImages].classList.add('show')
+        })
+       
+
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
